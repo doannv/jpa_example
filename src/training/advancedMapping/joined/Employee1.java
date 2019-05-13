@@ -21,15 +21,14 @@ public class Employee1 {
 	private int e_id;
 	private String e_name;
 
+	public Employee1() {
+		super();
+	}
+
 	public Employee1(int e_id, String e_name) {
 		super();
 		this.e_id = e_id;
 		this.e_name = e_name;
-	}
-
-	public Employee1() {
-		super();
-
 	}
 
 	public int getE_id() {

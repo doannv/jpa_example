@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import training.entities.Library;
+import training.model.Library;
 
 public class UpdateLibrary {
 	public static void main(String[] args) {
@@ -18,16 +18,19 @@ public class UpdateLibrary {
 
 		EntityManager entitymanager = emfactory.createEntityManager();
 		entitymanager.getTransaction().begin();
-		Library lb = entitymanager.find(Library.class, 1);
-
-		// before update
-		System.out.println(lb.toString());
-		lb.setName("HN");
-		entitymanager.getTransaction().commit();
-
-		// after update
-		System.out.println(lb.toString());
-		entitymanager.close();
-		emfactory.close();
+		try {
+			Library lb = entitymanager.find(Library.class, 1);
+			// before updatere
+			System.out.println(lb.toString());
+			lb.setName("HN");
+			entitymanager.getTransaction().commit();
+			// after update
+			System.out.println(lb.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			entitymanager.close();
+			emfactory.close();
+		}
 	}
 }

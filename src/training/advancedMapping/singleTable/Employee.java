@@ -16,8 +16,6 @@ import javax.persistence.Table;
 @Table(name = "employee_details")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Employee {
-
-	
 	@Id
 	private int e_id;
 	private String e_name;

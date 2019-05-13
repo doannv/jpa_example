@@ -4,13 +4,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="JpaExample_DoanNV">
-		<class>training.entities.Library</class>
+		<class>training.model.Library</class>
 		<class>training.advancedMapping.singleTable.Employee</class>
 		<class>training.advancedMapping.singleTable.ActiveEmployee</class>
 		<class>training.advancedMapping.singleTable.RetiredEmployee</class>
 		<class>training.advancedMapping.joined.Employee1</class>
 		<class>training.advancedMapping.joined.ActiveEmployee1</class>
-		<class>training.entities.Student</class>
+		<class>training.model.Student</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:mysql://localhost:3306/concretepage" />

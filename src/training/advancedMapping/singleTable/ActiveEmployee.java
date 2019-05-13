@@ -10,11 +10,6 @@ import javax.persistence.*;
 
 @Entity
 public class ActiveEmployee extends Employee {
-
-	/**
-	 * 
-	 */
-	
 	private int e_salary;
 	private int e_experience;
 
@@ -25,8 +20,6 @@ public class ActiveEmployee extends Employee {
 	}
 
 	public ActiveEmployee() {
-		super();
-
 	}
 
 	public int getE_salary() {

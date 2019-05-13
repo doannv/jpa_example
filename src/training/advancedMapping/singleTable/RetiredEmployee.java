@@ -11,10 +11,6 @@ import javax.persistence.Entity;
 @Entity
 public class RetiredEmployee extends Employee {
 
-	/**
-	 * 
-	 */
-	
 	private int e_pension;
 
 	public RetiredEmployee(int e_id, String e_name, int e_pension) {
